@@ -1,4 +1,5 @@
 import React from "react";
+import "./tracker.css";
   
 class Tracker extends React.Component {
     state = {
@@ -28,10 +29,10 @@ class Tracker extends React.Component {
     render() {
         return (
         <div>
-          <h5>{this.props.title}</h5>
-          <h3 className="numberForInput">{this.state.number}</h3>
-          <button onClick={this.addNumber}>Add</button>
-          <button onClick={this.subtractNumber}>Remove</button>
+          <span className="trackerTitle">{this.props.title}</span>
+          <span className="tracker">{this.state.number}</span>
+          <button className="trackerButton" onClick={this.addNumber}>Add</button>
+          <button className="trackerButton" onClick={this.subtractNumber}>Remove</button>
         </div>
         )
     }

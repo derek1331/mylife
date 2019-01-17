@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/header'
 import Tracker from './components/tracker'
 import NextTime from './components/nextTime'
+import Goals from './components/goals'
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <Tracker title="Jobs Applied Too">
           </Tracker>
           <NextTime title="Call Booba"></NextTime>
+          <Goals></Goals>
       </div>
     );
   }

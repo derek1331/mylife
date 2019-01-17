@@ -1,0 +1,16 @@
+.goals{
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.trackerButton{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.tracker{
+    font-size: 1rem;
+    font-weight: 500;
+    padding-right: 5px;
+}

@@ -30,7 +30,6 @@ class Modal extends React.Component {
         modalText.textContent = modalEditValue
         modalEdit.style.display = 'none'
         modalText.style.display = 'initial'
-        console.log(modalText);
     }
 
     render() {

@@ -8,13 +8,6 @@ class Notes extends React.Component {
         noteTitle: ""
     }
 
-    unhide = (element) => {
-        console.log(element)
-        // element.style.display = "initial"
-    }
-
-
-
     // Have to use arrow function here
     // Implicit return is nulled if there's brackets so nope
     // This! 
@@ -43,14 +36,12 @@ class Notes extends React.Component {
             listItem.textContent = noteTitle
             modalText.textContent = noteText
             modalEdit.value = noteText
-            listItem.onclick = () => {   
-                modalTitle.textContent = noteTitle
-                modal.style.display = 'initial'
+            modalTitle.textContent = noteTitle;
+            listItem.onmouseover = () => {
+                setTimeout(function(){ modal.style.display = 'initial'; }, 1000);
             }
             list.appendChild(listItem)
         }
-
-        console.log(noteTitle)
     }
 
 

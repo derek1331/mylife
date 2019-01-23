@@ -84,9 +84,7 @@ class Goals extends React.Component {
         goalsText.appendChild(deleteButton)
         goalsText.appendChild(completeButton)
         goalsText.appendChild(uncompleteButton)
-        goalsList.appendChild(goalsText)
-        console.log(goalsText);
-        
+        goalsList.appendChild(goalsText)        
      }
 
     render() {

@@ -3,7 +3,17 @@ import "./goals.css";
   
 class Goals extends React.Component {
     state = {
-        completedGoals: 0
+        completedGoals: 0,
+        goal: ""
+    }
+
+    handleInputChange = (event) => {
+        const target = event.target;
+        const name = target.name;
+        const value = target.value
+        this.setState({
+            [name]: value
+        })
     }
 
     // Can't do arrow function here cause it creates it's own this context
@@ -84,8 +94,10 @@ class Goals extends React.Component {
         <div>
           <span className="goals">Goals:</span>
           <span className="goalsTitle"></span>
-          <textarea className="goalsText" id="goalsText"></textarea>
+
+          <textarea name="goal" className="goalsText" id="goalsText" value={this.state.goal} onChange={this.handleInputChange}></textarea>
           <button className="goalsButton" onClick={this.addGoal} >Add</button>
+
           <ol className="goalsList" id="goalsList">
 
           </ol>

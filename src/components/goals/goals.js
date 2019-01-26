@@ -58,7 +58,7 @@ class Goals extends React.Component {
     // Add Goal
     addGoal = () => {
         // Input Value
-        let newGoal = document.getElementById('goalsText').value
+        let { goal } = this.state
         // Create Elements
         let goalsList = document.getElementById("goalsList")
         let goalsText = document.createElement("li")
@@ -66,7 +66,7 @@ class Goals extends React.Component {
         let completeButton = document.createElement("button")
         let uncompleteButton = document.createElement("button")
         // Goal Text 
-        goalsText.textContent = newGoal
+        goalsText.textContent = goal
         // Button Text Content
         deleteButton.textContent = "Delete"
         completeButton.textContent = "Complete"
@@ -84,7 +84,10 @@ class Goals extends React.Component {
         goalsText.appendChild(deleteButton)
         goalsText.appendChild(completeButton)
         goalsText.appendChild(uncompleteButton)
-        goalsList.appendChild(goalsText)        
+        goalsList.appendChild(goalsText)
+        this.setState({
+            goal: ""
+        })     
      }
 
     render() {

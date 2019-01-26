@@ -27,20 +27,27 @@ class Notes extends React.Component {
         if (noteTitle === "") {
             return
         } else {
+            // Assign elements to variables
             let list = document.getElementById('notesList')
-            let listItem = document.createElement('li')
             let modal = document.getElementById('modalMain')
             let modalTitle = document.getElementById('modalTitle')
             let modalText = document.getElementById('modalText')
             let modalEdit = document.getElementById('modalEdit')
+            let listItem = document.createElement('li')
+            // Assign text to list and modal
             listItem.textContent = noteTitle
             modalText.textContent = noteText
-            modalEdit.value = noteText
             modalTitle.textContent = noteTitle;
+            // Assign text to textarea
+            modalEdit.value = noteText
             listItem.onmouseover = () => {
-                setTimeout(function(){ modal.style.display = 'initial'; }, 1000);
+                setTimeout(function(){ modal.style.display = 'initial'; }, 2000);
             }
             list.appendChild(listItem)
+            this.setState({
+                noteText: "",
+                noteTitle: ""
+            })  
         }
     }
 
@@ -50,7 +57,7 @@ class Notes extends React.Component {
         return (
         <div className="notesMain" id="notesMain">
             <Modal></Modal>
-          <span className="notes">Add Note:</span>
+          <span className="notes temp">Notes:</span>
           <span className="notesTitle"></span>
           <form>
             <label>Title: </label>
